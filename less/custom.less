@@ -1,0 +1,440 @@
+@import url('colors');
+@import url('animations');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+  font-family: 'Raleway', sans-serif !important;
+  //font-family: Roboto Slab,Lucida Bright,Verdana,Georgia,serif;
+  font-size: 15px !important;
+  //font-weight: 300;
+
+  //.main-content > div:first-child {
+  //  display: none;
+  //}
+
+  .flex-wrap {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  p.help-block {
+    text-align: left;
+    font-size: 12px;
+    color: @anthracite;
+  }
+
+  .modal-backdrop {
+    pointer-events: none;
+  }
+
+  /* Overwrite theme default classes WHMCS */
+  .bg-color-blue {
+    background-color: @blue;
+  }
+  .bg-color-gold, .btn-warning {
+    background-color: @orange;
+  }
+
+  .panel[class^='panel-accent-'], .panel[class*=' panel-accent-'] {
+    border-top-color: @orange !important;
+  }
+  .btn[class^='bg-color-'], .btn[class*=' bg-color-'],
+  .highlight[class^='bg-color-'], .highlight[class*=' bg-color-'] {
+    background-color: @orange !important;
+  }
+
+  .panel[class^='panel-accent-'], .panel[class*=' panel-accent-'] {
+    .panel-heading {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+    }
+
+    .rolingBorder(@anthracite);
+  }
+
+  //.panel.panel-accent-gold {
+  //  border-top-color: @orange;
+  //}
+
+  .alert {
+    &.alert-info {
+      background-color: @lightAnthracite;
+      color: @anthracite;
+
+      border: 0 !important;
+    }
+  }
+
+  .label-info {
+    background-color: @blue;
+  }
+
+  .fa {
+    &.fa-question-circle {
+      color: @blue;
+    }
+  }
+
+  .btn {
+    &.btn-action, &.btn-primary, &.btn-block {
+      background-color: @gray !important;
+      color: @white !important;
+
+      border: 0 !important;
+
+      .animateBackground;
+
+      &:hover {
+        background-color: @anthracite !important;
+
+        .animateBackground;
+      }
+    }
+
+    &.btn-info {
+      background-color: @blue;
+    }
+
+    /*&:hover {
+      color: @anthracite !important;
+    }*/
+  }
+
+  .pagination {
+    .paginate_button {
+      a {
+        .animateBackground;
+      }
+    }
+  }
+
+  .btn-group {
+    a.btn, button.btn {
+      .animateBackground;
+    }
+  }
+
+  .domain-checker-container {
+    .gradient(@anthracite, @gray);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .1);
+
+    .domain-checker-bg {
+      background-position: 101% -72px !important;
+      background-size: 34%;
+
+      background-image: url(/secure/assets/img/xenomedia-logo-wit.svg);
+
+      form {
+        .row {
+          .input-group {
+            border: thin solid @darkGray;
+          }
+        }
+      }
+    }
+  }
+  /* ./ Overwrite theme default classes WHMCS */
+
+  section {
+    &#header {
+      padding: 8px 0;
+
+      .container {
+        .logo {
+          & > img {
+            max-height: 50px;
+          }
+        }
+      }
+    }
+
+    &#main-menu {
+      .navbar-main {
+        margin-bottom: 0;
+        background-color: @orange;
+        border: 0;
+        min-height: 38px;
+        font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        border-radius: 0;
+
+        .container {
+          .navbar-collapse {
+            ul.navbar-nav {
+              li {
+
+                a:focus {
+                  background-color: @anthracite;
+                }
+
+                & > a {
+                  .animateBackground;
+
+                  &:hover {
+                    //.animateBackground;
+
+                    background-color: @anthracite;
+                    color: @white;
+                  }
+                }
+
+                &.dropdown.open {
+                  & > a {
+                    background-color: @anthracite;
+                  }
+                }
+
+                &.account {
+                  & > a {
+                    .animateBackground;
+
+                    background-color: @orange;
+
+                    &:hover {
+                      .animateBackground;
+
+                      background-color: @anthracite !important;
+                    }
+                  }
+                }
+
+                &:focus, &.active {
+
+                  & > a {
+                    background-color: @anthracite;
+                  }
+
+                  &:hover {
+                    & > a {
+                      .animateColor;
+
+                      background-color: @lightAnthracite;
+                      color: @anthracite;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &#main-body {
+      .animated();
+      .fadeIn;
+
+      .container {
+        .row {
+          .header-lined {
+            h1 {
+              background-color: @anthracite;
+              color: @white;
+
+              padding: 10px 15px;
+
+              border-top-left-radius: 3px;
+              border-top-right-radius: 3px;
+
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+
+              font-size: 25px;
+              font-weight: 700 !important;
+
+              small {
+                color: @darkGray;
+              }
+            }
+
+            .breadcrumb {
+              & > .active {
+                color: @anthracite;
+
+                font-weight: 700;
+              }
+            }
+          }
+
+          .panel {
+            .panel-heading {
+              background-color: @anthracite;
+
+              .panel-title {
+                font-family: 'Raleway', sans-serif;
+                color: @white;
+              }
+            }
+
+            .list-group {
+              & > a {
+                &.list-group-item {
+                  &.active {
+                    background-color: @lightAnthracite;
+                    border-color: @darkGray;
+                    color: @anthracite;
+
+                    font-weight: 700;
+
+                    i.fa {
+                      color: @orange !important;
+                    }
+
+                    &:hover {
+                      color: @anthracite;
+                    }
+
+                    & > .badge {
+                      color: @blue;
+                    }
+                  }
+
+                  .animateBackground;
+
+                  &:hover {
+                    .animateBackground;
+                  }
+
+                  i.fa {
+                    .animateColor;
+                  }
+
+                  &:hover {
+                    i.fa {
+                      .animateColor;
+
+                      color: @orange !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .main-content {
+            .table-container {
+              table {
+                tbody {
+                  tr {
+                    td {
+                      a {
+                        color: @anthracite;
+
+                        &:hover {
+                          color: @anthracite;
+                        }
+                      }
+                    }
+
+                    &.even {
+                      td {
+                        background-color: @lightGray;
+
+                        .animateBackground;
+                      }
+                    }
+
+                    &:hover {
+                      td {
+                        background-color: @darkGray;
+
+                        .animateBackground;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .tab-content {
+              .tab-pane {
+                .btn-group {
+                  .dropdown-menu {
+                    li {
+                      a {
+                        .animateBackground;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            #order-standard_cart {
+              .products {
+                .row {
+                  .product {
+                    header {
+                      background-color: @anthracite;
+
+                      span {
+                        color: @white;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .domain-selection-options {
+                .option {
+                  background-color: @darkGray;
+
+                  &.option-selected {
+                    background-color: @anthracite;
+
+                    label {
+                      color: @white;
+                    }
+                  }
+                }
+              }
+
+              .view-cart-items-header {
+                background-color: @lightGray;
+                color: @anthracite;
+              }
+            }
+
+            strong {
+              a {
+                color: @anthracite;
+
+                i {
+                  color: @anthracite;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &#footer {
+      p {
+        border-color: @anthracite;
+      }
+    }
+  }
+
+  .dataTables_wrapper {
+    .dataTables_info {
+      background-color: @anthracite;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    #fs-button-wrapper {
+      p {
+        a.btn {
+          width: 100%;
+
+          &:nth-child(2) {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

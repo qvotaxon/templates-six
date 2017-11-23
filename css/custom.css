@@ -1,8 +1,446 @@
-/* *****************************************************
-
-    ** Custom Stylesheet **
-
-    Any custom styling you want to apply should be
-    defined here.
-
-***************************************************** */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+body {
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+.animateBackground {
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+.animateColor {
+  -webkit-transition: color 500ms linear;
+  -moz-transition: color 500ms linear;
+  -o-transition: color 500ms linear;
+  -ms-transition: color 500ms linear;
+  transition: color 500ms linear;
+}
+body {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 15px !important;
+  /* Overwrite theme default classes WHMCS */
+  /* ./ Overwrite theme default classes WHMCS */
+}
+body .flex-wrap {
+  flex-wrap: wrap;
+  display: flex;
+}
+body p.help-block {
+  text-align: left;
+  font-size: 12px;
+  color: #555555;
+}
+body .modal-backdrop {
+  pointer-events: none;
+}
+body .bg-color-blue {
+  background-color: #00AFEF;
+}
+body .bg-color-gold,
+body .btn-warning {
+  background-color: #f58634;
+}
+body .panel[class^='panel-accent-'],
+body .panel[class*=' panel-accent-'] {
+  border-top-color: #f58634 !important;
+}
+body .btn[class^='bg-color-'],
+body .btn[class*=' bg-color-'],
+body .highlight[class^='bg-color-'],
+body .highlight[class*=' bg-color-'] {
+  background-color: #f58634 !important;
+}
+body .panel[class^='panel-accent-'],
+body .panel[class*=' panel-accent-'] {
+  background: none;
+  box-sizing: border-box;
+  font-size: inherit;
+  position: relative;
+  vertical-align: middle;
+  transition: color 0.25s;
+}
+body .panel[class^='panel-accent-'] .panel-heading,
+body .panel[class*=' panel-accent-'] .panel-heading {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+body .panel[class^='panel-accent-']::before,
+body .panel[class*=' panel-accent-']::before,
+body .panel[class^='panel-accent-']::after,
+body .panel[class*=' panel-accent-']::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body .panel[class^='panel-accent-']:before,
+body .panel[class*=' panel-accent-']:before,
+body .panel[class^='panel-accent-']:after,
+body .panel[class*=' panel-accent-']:after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+  z-index: 9;
+}
+body .panel[class^='panel-accent-']:before,
+body .panel[class*=' panel-accent-']:before {
+  top: 0;
+  left: 0;
+}
+body .panel[class^='panel-accent-']:after,
+body .panel[class*=' panel-accent-']:after {
+  bottom: 0;
+  right: 0;
+}
+body .panel[class^='panel-accent-']:hover:before,
+body .panel[class*=' panel-accent-']:hover:before,
+body .panel[class^='panel-accent-']:hover:after,
+body .panel[class*=' panel-accent-']:hover:after {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+body .panel[class^='panel-accent-']:hover:before,
+body .panel[class*=' panel-accent-']:hover:before {
+  border-top-color: #555555;
+  border-right-color: #555555;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+body .panel[class^='panel-accent-']:hover:after,
+body .panel[class*=' panel-accent-']:hover:after {
+  border-bottom-color: #555555;
+  border-left-color: #555555;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+body .alert.alert-info {
+  background-color: #f5f5f5;
+  color: #555555;
+  border: 0 !important;
+}
+body .label-info {
+  background-color: #00AFEF;
+}
+body .fa.fa-question-circle {
+  color: #00AFEF;
+}
+body .btn {
+  /*&:hover {
+      color: @anthracite !important;
+    }*/
+}
+body .btn.btn-action,
+body .btn.btn-primary,
+body .btn.btn-block {
+  background-color: #96989A !important;
+  color: #FFFFFF !important;
+  border: 0 !important;
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+body .btn.btn-action:hover,
+body .btn.btn-primary:hover,
+body .btn.btn-block:hover {
+  background-color: #555555 !important;
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+body .btn.btn-info {
+  background-color: #00AFEF;
+}
+body .pagination .paginate_button a {
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+body .btn-group a.btn,
+body .btn-group button.btn {
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+body .domain-checker-container {
+  background-color: #555555;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#96989A), to(#555555));
+  background: -webkit-linear-gradient(top, #555555, #96989A);
+  background: -moz-linear-gradient(top, #555555, #96989A);
+  background: -ms-linear-gradient(top, #555555, #96989A);
+  background: -o-linear-gradient(top, #555555, #96989A);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+body .domain-checker-container .domain-checker-bg {
+  background-position: 101% -72px !important;
+  background-size: 34%;
+  background-image: url(/secure/assets/img/xenomedia-logo-wit.svg);
+}
+body .domain-checker-container .domain-checker-bg form .row .input-group {
+  border: thin solid #ddd;
+}
+body section#header {
+  padding: 8px 0;
+}
+body section#header .container .logo > img {
+  max-height: 50px;
+}
+body section#main-menu .navbar-main {
+  margin-bottom: 0;
+  background-color: #f58634;
+  border: 0;
+  min-height: 38px;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  border-radius: 0;
+}
+body section#main-menu .navbar-main .container .navbar-collapse ul.navbar-nav li a:focus {
+  background-color: #555555;
+}
+body section#main-menu .navbar-main .container .navbar-collapse ul.navbar-nav li > a {
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+body section#main-menu .navbar-main .container .navbar-collapse ul.navbar-nav li > a:hover {
+  background-color: #555555;
+  color: #FFFFFF;
+}
+body section#main-menu .navbar-main .container .navbar-collapse ul.navbar-nav li.dropdown.open > a {
+  background-color: #555555;
+}
+body section#main-menu .navbar-main .container .navbar-collapse ul.navbar-nav li.account > a {
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+  background-color: #f58634;
+}
+body section#main-menu .navbar-main .container .navbar-collapse ul.navbar-nav li.account > a:hover {
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+  background-color: #555555 !important;
+}
+body section#main-menu .navbar-main .container .navbar-collapse ul.navbar-nav li:focus > a,
+body section#main-menu .navbar-main .container .navbar-collapse ul.navbar-nav li.active > a {
+  background-color: #555555;
+}
+body section#main-menu .navbar-main .container .navbar-collapse ul.navbar-nav li:focus:hover > a,
+body section#main-menu .navbar-main .container .navbar-collapse ul.navbar-nav li.active:hover > a {
+  -webkit-transition: color 500ms linear;
+  -moz-transition: color 500ms linear;
+  -o-transition: color 500ms linear;
+  -ms-transition: color 500ms linear;
+  transition: color 500ms linear;
+  background-color: #f5f5f5;
+  color: #555555;
+}
+body section#main-body {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+body section#main-body .container .row .header-lined h1 {
+  background-color: #555555;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 25px;
+  font-weight: 700 !important;
+}
+body section#main-body .container .row .header-lined h1 small {
+  color: #ddd;
+}
+body section#main-body .container .row .header-lined .breadcrumb > .active {
+  color: #555555;
+  font-weight: 700;
+}
+body section#main-body .container .row .panel .panel-heading {
+  background-color: #555555;
+}
+body section#main-body .container .row .panel .panel-heading .panel-title {
+  font-family: 'Raleway', sans-serif;
+  color: #FFFFFF;
+}
+body section#main-body .container .row .panel .list-group > a.list-group-item {
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+body section#main-body .container .row .panel .list-group > a.list-group-item.active {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  color: #555555;
+  font-weight: 700;
+}
+body section#main-body .container .row .panel .list-group > a.list-group-item.active i.fa {
+  color: #f58634 !important;
+}
+body section#main-body .container .row .panel .list-group > a.list-group-item.active:hover {
+  color: #555555;
+}
+body section#main-body .container .row .panel .list-group > a.list-group-item.active > .badge {
+  color: #00AFEF;
+}
+body section#main-body .container .row .panel .list-group > a.list-group-item:hover {
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+body section#main-body .container .row .panel .list-group > a.list-group-item i.fa {
+  -webkit-transition: color 500ms linear;
+  -moz-transition: color 500ms linear;
+  -o-transition: color 500ms linear;
+  -ms-transition: color 500ms linear;
+  transition: color 500ms linear;
+}
+body section#main-body .container .row .panel .list-group > a.list-group-item:hover i.fa {
+  -webkit-transition: color 500ms linear;
+  -moz-transition: color 500ms linear;
+  -o-transition: color 500ms linear;
+  -ms-transition: color 500ms linear;
+  transition: color 500ms linear;
+  color: #f58634 !important;
+}
+body section#main-body .container .row .main-content .table-container table tbody tr td a {
+  color: #555555;
+}
+body section#main-body .container .row .main-content .table-container table tbody tr td a:hover {
+  color: #555555;
+}
+body section#main-body .container .row .main-content .table-container table tbody tr.even td {
+  background-color: #eee;
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+body section#main-body .container .row .main-content .table-container table tbody tr:hover td {
+  background-color: #ddd;
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+body section#main-body .container .row .main-content .tab-content .tab-pane .btn-group .dropdown-menu li a {
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+body section#main-body .container .row .main-content #order-standard_cart .products .row .product header {
+  background-color: #555555;
+}
+body section#main-body .container .row .main-content #order-standard_cart .products .row .product header span {
+  color: #FFFFFF;
+}
+body section#main-body .container .row .main-content #order-standard_cart .domain-selection-options .option {
+  background-color: #ddd;
+}
+body section#main-body .container .row .main-content #order-standard_cart .domain-selection-options .option.option-selected {
+  background-color: #555555;
+}
+body section#main-body .container .row .main-content #order-standard_cart .domain-selection-options .option.option-selected label {
+  color: #FFFFFF;
+}
+body section#main-body .container .row .main-content #order-standard_cart .view-cart-items-header {
+  background-color: #eee;
+  color: #555555;
+}
+body section#main-body .container .row .main-content strong a {
+  color: #555555;
+}
+body section#main-body .container .row .main-content strong a i {
+  color: #555555;
+}
+body section#footer p {
+  border-color: #555555;
+}
+body .dataTables_wrapper .dataTables_info {
+  background-color: #555555;
+}
+@media screen and (max-width: 500px) {
+  body #fs-button-wrapper p a.btn {
+    width: 100%;
+  }
+  body #fs-button-wrapper p a.btn:nth-child(2) {
+    margin-top: 10px;
+  }
+}

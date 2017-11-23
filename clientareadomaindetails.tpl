@@ -125,6 +125,7 @@
         <br />
         <br />
 
+        {if $showautorenew}
         <form method="post" action="{$smarty.server.PHP_SELF}?action=domaindetails#tabAutorenew">
             <input type="hidden" name="id" value="{$domainid}">
             <input type="hidden" name="sub" value="autorenew" />
@@ -140,6 +141,7 @@
                 </p>
             {/if}
         </form>
+        {/if}
 
     </div>
     <div class="tab-pane fade" id="tabNameservers">
